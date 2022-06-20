@@ -6,9 +6,11 @@
 
 // export default TextStyler
 
-function TextStyler(props){
-
-    return <div style={{color: 'red'}}>{props.text.toUpperCase()}</div>
+function TextStyler(props) {
+  if (!props.text) {
+    return null;
+  }
+  return <div style={{ color: "red" }}>{props.text.toUpperCase()}</div>;
 }
 
-export default TextStyler
+export default TextStyler;
